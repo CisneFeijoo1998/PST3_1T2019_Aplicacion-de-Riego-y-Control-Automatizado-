@@ -170,7 +170,7 @@
         android:layout_marginTop="12dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/ingrese_su_contrase_a"
+        android:hint="Ingrese su contraseña "
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
@@ -183,7 +183,7 @@
         android:layout_marginTop="20dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/ingrese_su_contrase_a"
+        android:hint="Ingrese de nuevo su contraseña"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/editText7" />

@@ -16,7 +16,6 @@
     <string name="logo">TODO</string>
     <string name="contrase_a">Contraseña</string>
     <string name="correo_electr_nico">Correo electrónico</string>
-    <string name="contrase_a">Contraseña</string>
     <string name="name1" />
     <string name="registrate">Registrate</string>
     <string name="nombre">Nombre:</string>
@@ -27,8 +26,8 @@
     <string name="ingrese_su_nombre">Ingrese su nombre</string>
     <string name="ingrese_su_email">Ingrese su email</string>
     <string name="ingrese_un_usuario">Ingrese un usuario</string>
-    <string name="ingrese_su_contrase_a">Ingrese su contraseña</string>
-    <string name="ingrese_su_contrase_a">Ingrese su contraseña</string>
+    <string name="ingrese_su_contrase_a1">Ingrese su contraseña</string>
+    <string name="ingrese_su_contrase_a2">Ingrese su contraseña</string>
     <string name="registrar">Registrar</string>
     <string name="salir">Salir</string>
 </resources>
