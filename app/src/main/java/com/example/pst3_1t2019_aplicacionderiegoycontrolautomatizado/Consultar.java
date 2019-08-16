@@ -16,7 +16,11 @@ public class Consultar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultar);
         spinner1= (Spinner)findViewById(R.id.spinner);
+<<<<<<< HEAD
         String [] opciones= {"Enero","Febrero","Marzo","Abrl","Mayo","Junio","Julio","Agosto","Septiembre","Optubre","Noviembre","Diciembre"};
+=======
+        String [] opciones= {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Optubre","Noviembre","Diciembre"};
+>>>>>>> Yovana_Zambrano_Ruiz
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, opciones);
         spinner1.setAdapter(adapter);
     }
