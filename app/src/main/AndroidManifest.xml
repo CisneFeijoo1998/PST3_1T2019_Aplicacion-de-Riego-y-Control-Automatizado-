@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".consulta_por_dia"></activity>
         <activity android:name=".consumo_por_mes" />
+=======
+        <activity android:name=".Consultar"></activity>
+        <activity android:name=".Inicio" />
+>>>>>>> 86a1f30903502a8d79a81f644181650fba11b92f
         <activity android:name=".CrearCuenta" />
         <activity
             android:name=".ui.login.LoginActivity"
