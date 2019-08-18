@@ -2,12 +2,20 @@ package com.example.pst3_1t2019_aplicacionderiegoycontrolautomatizado;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.database.sqlite.SQLiteDatabase;
 
 public class CrearCuenta extends AppCompatActivity {
+    private EditText nombre, email, usuario,contraseña, confirmar_contraseña;
+    //Variables de la base de datos
+    private SQLiteDatabase db;
     private Spinner spinner1;
 
     @Override
@@ -30,6 +38,28 @@ public class CrearCuenta extends AppCompatActivity {
 
             Toast.makeText(this, "Selección Exitosa", Toast.LENGTH_LONG).show();
         }
+        nombre= findViewById(R.id.txtnombre);
+        email= findViewById(R.id.txtemail);
+        usuario= findViewById(R.id.txtusuario);
+        contraseña= findViewById(R.id.txtcontraseña);
 
+
+    }
+    public void añadirUsuario(View view){
+
+        String nombre_db = nombre.getText().toString();
+        String contraseña_db = contraseña.getText().toString();
+        String correo_db = email.getText().toString();
+        String sector_db = spinner1.getSelectedItem().toString();
+        if(!TextUtils.isEmpty(nombre_db)&&!TextUtils.isEmpty(contraseña_db)&&!TextUtils.isEmpty(correo_db)&&!TextUtils.isEmpty(sector_db)){
+            db = LoginActivity.dataBaseManager.getWritableDatabase();
+            db.execSQL("insert into usuarios (usuario,contrasena,nombres,apellidos,fecha_nacimiento,sexo)" +
+                    "values('"+correo_db+"','"+"','"+nombre_db+"','"+contraseña_db+"',"+sector_db+"')");
+            db.close();
+            Intent intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
+        } else{
+            Toast.makeText(this, "Ingrese datos validos", Toast.LENGTH_SHORT).show();
+        }
     }
 }
